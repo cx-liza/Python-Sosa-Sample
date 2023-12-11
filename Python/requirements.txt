@@ -1,0 +1,6 @@
+humanize==1.0.0
+botocore==1.13.45
+python-dateutil==2.8.1
+buildbot==0.7.11
+mercurial==4.8.2
+python-gnupg==0.4.3

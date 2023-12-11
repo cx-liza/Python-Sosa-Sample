@@ -1,0 +1,23 @@
+Expected results:
+Python-botocore-1.13.45
+- Package in manifest but not used at all
+
+humanize==1.0.0
+- "intcomma" function called from ln#5
+
+python-dateutil==2.8.1
+- 2 calls:
+	- "parser.__init__()" (new parser () ctor)
+	- "parse()" function called from ln#7
+
+buildbot==0.7.11:
+vulnerability Id-  56921bc7-2478-47df-a1ee-6f875ac80690
+- Code is calling "body()" vulnerable function
+
+mercurial==4.8.2
+VulnerabilityId - 2142ba66-1c12-4de7-a9fc-39e1048b69e5
+- Code calls subrepo() func that call vulnerable method: _auditsubrepopath (SOSA phase 2.5)
+
+Python-python-gnupg-0.4.3
+VulnerabilityId = '46b3518f-7cb8-4ccd-ac87-e10d32492410'
+- Code calls none vulnerable functions, so the package should be mark as "not exploitable"
